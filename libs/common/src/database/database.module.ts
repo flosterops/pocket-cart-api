@@ -15,12 +15,8 @@ import { DatabaseProvider } from '@app/common/database/database.provider';
                     const db = new Client({
                         user: configService.get<string>('POSTGRES_USER'),
                         host: configService.get<string>('POSTGRES_HOST'),
-                        database: configService.get<string>(
-                            'POSTGRES_DB_POCKET_CART',
-                        ),
-                        password: configService.get<string>(
-                            'POSTGRES_USER_PASSWORD',
-                        ),
+                        database: configService.get<string>('POSTGRES_DB_POCKET_CART'),
+                        password: configService.get<string>('POSTGRES_USER_PASSWORD'),
                         port: configService.get<number>('POSTGRES_PORT'),
                     });
 
