@@ -11,6 +11,8 @@ describe('ProductsController', () => {
             providers: [ProductsService],
         }).compile();
 
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         controller = module.get<ProductsController>(ProductsController);
     });
 

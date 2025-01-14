@@ -11,6 +11,8 @@ describe('ListsController', () => {
             providers: [ListsService],
         }).compile();
 
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         controller = module.get<ListsController>(ListsController);
     });
 

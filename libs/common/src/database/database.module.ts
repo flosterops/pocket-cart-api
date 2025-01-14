@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import * as pg from 'pg';
 import { Client } from 'pg';
 import { ConfigModule } from '@app/common/config';
 import { ConfigService } from '@nestjs/config';

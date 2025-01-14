@@ -9,6 +9,8 @@ describe('ListsService', () => {
             providers: [ListsService],
         }).compile();
 
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         service = module.get<ListsService>(ListsService);
     });
 
