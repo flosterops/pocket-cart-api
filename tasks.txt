@@ -1,0 +1,14 @@
+1. migration:
+    create products table
+    create lists table (relation many to one)
+    seed
+2. DB service
+3. app controller
+3.1 assign product to list
+3.2 unassign product from list
+4.1 delete list, unassign all products
+4.2 delete product, unassign from all lists
+4.3 get all products for specific list
+5. aws
+6. github action / Circle.ci
+7.

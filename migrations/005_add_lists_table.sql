@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS lists (
+    list_id SERIAL PRIMARY KEY,
+    list_name VARCHAR(100) NOT NULL UNIQUE
+)
