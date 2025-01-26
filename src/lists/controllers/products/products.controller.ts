@@ -1,7 +1,8 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { ProductsService } from './products.service';
-import { CreateProductDto } from './dto/create-product.dto';
-import { UpdateProductDto } from './dto/update-product.dto';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors } from '@nestjs/common';
+import { ProductsService } from '../../services/products/products.service';
+import { CreateProductDto } from '../../dto/product/create-product.dto';
+import { UpdateProductDto } from '../../dto/product/update-product.dto';
+import { CacheInterceptor } from '@nestjs/cache-manager';
 
 @Controller('products')
 export class ProductsController {
@@ -13,11 +14,13 @@ export class ProductsController {
     }
 
     @Get()
+    @UseInterceptors(CacheInterceptor)
     findAll() {
         return this.productsService.findAll();
     }
 
     @Get(':id')
+    @UseInterceptors(CacheInterceptor)
     findOne(@Param('id') id: string) {
         return this.productsService.findOne(+id);
     }

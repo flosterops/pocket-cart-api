@@ -1,9 +1,9 @@
 import { AbstractRepository } from '@app/common/database/abstract.repository';
 import { Injectable, Logger } from '@nestjs/common';
 import { DatabaseProvider } from '@app/common/database/database.provider';
-import { ListProductModel } from './entities/list-product.model';
-import { ListProduct } from './entities/list-product.entity';
-import { IFindAllListProducts, IListProducts } from './interfaces/find-all-list-products.interface';
+import { ListProductModel } from '../entities/list-product.model';
+import { ListProduct } from '../entities/list-product.entity';
+import { IFindAllListProducts, IListProducts } from '../interfaces/find-all-list-products.interface';
 
 // TODO: repository pattern
 @Injectable()

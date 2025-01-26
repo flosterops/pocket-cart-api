@@ -1,19 +1,19 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ListsController } from './lists.controller';
-import { ListsService } from './lists.service';
+import { ProductsController } from './products.controller';
+import { ProductsService } from '../../services/products/products.service';
 
-describe('ListsController', () => {
-    let controller: ListsController;
+describe('ProductsController', () => {
+    let controller: ProductsController;
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
-            controllers: [ListsController],
-            providers: [ListsService],
+            controllers: [ProductsController],
+            providers: [ProductsService],
         }).compile();
 
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
-        controller = module.get<ListsController>(ListsController);
+        controller = module.get<ProductsController>(ProductsController);
     });
 
     it('should be defined', () => {

@@ -19,6 +19,7 @@ export abstract class AbstractRepository<Entity extends AbstractEntity> extends 
             const query = `SELECT * FROM ${this.model.table}`;
             const results = await this.query(query);
 
+            console.log('here');
             return results;
         } catch (error) {
             throw error;

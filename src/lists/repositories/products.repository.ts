@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { AbstractRepository } from '@app/common/database/abstract.repository';
-import { Product } from './entities/product.entity';
-import { ProductModel } from './entities/product.model';
+import { Product } from '../entities/product/product.entity';
+import { ProductModel } from '../entities/product/product.model';
 import { DatabaseProvider } from '@app/common/database/database.provider';
 
 @Injectable()

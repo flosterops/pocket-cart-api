@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { CreateProductDto } from './dto/create-product.dto';
-import { UpdateProductDto } from './dto/update-product.dto';
-import { ProductsRepository } from './products.repository';
+import { CreateProductDto } from '../../dto/product/create-product.dto';
+import { UpdateProductDto } from '../../dto/product/update-product.dto';
+import { ProductsRepository } from '../../repositories/products.repository';
 
 @Injectable()
 export class ProductsService {

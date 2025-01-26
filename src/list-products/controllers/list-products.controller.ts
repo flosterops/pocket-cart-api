@@ -1,18 +1,20 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common';
-import { ListProductsService } from './list-products.service';
-import { AssignProductToListDto, UnAssignProductFromListDto } from './dto/assign-product-to-list.dto';
+import { Controller, Get, Post, Body, Param, UseInterceptors } from '@nestjs/common';
+import { ListProductsService } from '../services/list-products.service';
+import { AssignProductToListDto, UnAssignProductFromListDto } from '../dto/assign-product-to-list.dto';
+import { CacheInterceptor } from '@nestjs/cache-manager';
 
-// TODO: 1. can be independent entity 2.
 @Controller('lists-products')
 export class ListProductsController {
     constructor(private readonly listProductsService: ListProductsService) {}
 
     @Get()
+    @UseInterceptors(CacheInterceptor)
     findAll() {
         return this.listProductsService.findAll();
     }
 
     @Get(':list_id/products')
+    @UseInterceptors(CacheInterceptor)
     findOne(@Param('list_id') list_id: string) {
         return this.listProductsService.findOne(+list_id);
     }

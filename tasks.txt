@@ -16,7 +16,7 @@
 7. RabbitMQ
 
 After review -
-1. products to Lists
-2. diagram of DB relation. Data layer diagram
+1. products to Lists ++
+2. diagram of DB relation. Data layer diagram ++
 3. Cache. Cache levels. With the simplest one - HTTP Cache. Inmemory cache
 4.

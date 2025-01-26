@@ -1,7 +1,8 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { ListsService } from './lists.service';
-import { CreateListDto } from './dto/create-list.dto';
-import { UpdateListDto } from './dto/update-list.dto';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors } from '@nestjs/common';
+import { ListsService } from '../../services/lists/lists.service';
+import { CreateListDto } from '../../dto/list/create-list.dto';
+import { UpdateListDto } from '../../dto/list/update-list.dto';
+import { CacheInterceptor } from '@nestjs/cache-manager';
 
 @Controller('lists')
 export class ListsController {
@@ -13,11 +14,13 @@ export class ListsController {
     }
 
     @Get()
+    @UseInterceptors(CacheInterceptor)
     findAll() {
         return this.listsService.findAll();
     }
 
     @Get(':id')
+    @UseInterceptors(CacheInterceptor)
     findOne(@Param('id') id: string) {
         return this.listsService.findOne(+id);
     }

@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { ListProductsRepository } from './list-products.repository';
+import { ListProductsRepository } from '../repositories/list-products.repository';
 import {
     IFindAllListProducts,
     IListProducts,
     IListWithProducts,
     IProduct,
-} from './interfaces/find-all-list-products.interface';
+} from '../interfaces/find-all-list-products.interface';
 
 @Injectable()
 export class ListProductsService {
