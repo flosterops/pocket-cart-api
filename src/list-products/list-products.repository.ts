@@ -5,6 +5,7 @@ import { ListProductModel } from './entities/list-product.model';
 import { ListProduct } from './entities/list-product.entity';
 import { IFindAllListProducts, IListProducts } from './interfaces/find-all-list-products.interface';
 
+// TODO: repository pattern
 @Injectable()
 export class ListProductsRepository extends AbstractRepository<ListProduct> {
     protected readonly logger: Logger;

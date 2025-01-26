@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { ListProductsService } from './list-products.service';
 import { AssignProductToListDto, UnAssignProductFromListDto } from './dto/assign-product-to-list.dto';
 
+// TODO: 1. can be independent entity 2.
 @Controller('lists-products')
 export class ListProductsController {
     constructor(private readonly listProductsService: ListProductsService) {}

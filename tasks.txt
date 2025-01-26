@@ -6,9 +6,17 @@
 3. app controller
 3.1 assign product to list
 3.2 unassign product from list
-4.1 delete list, unassign all products
-4.2 delete product, unassign from all lists
+
+4.1 delete list, unassign all products !!!
+4.2 delete product, unassign from all lists !!!
+
 4.3 get all products for specific list
 5. aws
 6. github action / Circle.ci
-7.
+7. RabbitMQ
+
+After review -
+1. products to Lists
+2. diagram of DB relation. Data layer diagram
+3. Cache. Cache levels. With the simplest one - HTTP Cache. Inmemory cache
+4.

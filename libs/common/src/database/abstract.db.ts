@@ -3,6 +3,7 @@ import { AbstractEntity } from '@app/common/database/abstract.entity';
 import { Client, QueryResult } from 'pg';
 
 // TODO: DB not working properly
+// TODO: any DB import
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export abstract class AbstractDb<Entity extends AbstractEntity, DB = Client> {
     protected abstract readonly logger: Logger;
